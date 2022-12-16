@@ -35,14 +35,14 @@ k8s_yaml(['k8s/deployment.yaml', 'k8s/service.yaml'])
 #
 #   More info: https://docs.tilt.dev/api.html#api.k8s_resource
 #
-# k8s_resource('my-deployment',
+ k8s_resource('api-backend',
 #              # map one or more local ports to ports on your Pod
-#              port_forwards=['5000:8080'],
+              port_forwards=['5000:3001'],
 #              # change whether the resource is started by default
 #              auto_init=False,
 #              # control whether the resource automatically updates
 #              trigger_mode=TRIGGER_MODE_MANUAL
-# )
+ )
 
 
 # Run local commands
