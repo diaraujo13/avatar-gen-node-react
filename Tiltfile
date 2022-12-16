@@ -1,33 +1,3 @@
-# Welcome to Tilt!
-#   To get you started as quickly as possible, we have created a
-#   starter Tiltfile for you.
-#
-#   Uncomment, modify, and delete any commands as needed for your
-#   project's configuration.
-
-
-# Output diagnostic messages
-#   You can print log messages, warnings, and fatal errors, which will
-#   appear in the (Tiltfile) resource in the web UI. Tiltfiles support
-#   multiline strings and common string operations such as formatting.
-#
-#   More info: https://docs.tilt.dev/api.html#api.warn
-print("""
------------------------------------------------------------------
-✨ Hello Tilt! This appears in the (Tiltfile) pane whenever Tilt
-   evaluates this file.
------------------------------------------------------------------
-""".strip())
-warn('ℹ️ Open {tiltfile_path} in your favorite editor to get started.'.format(
-    tiltfile_path=config.main_path))
-
-
-# Build Docker image
-#   Tilt will automatically associate image builds with the resource(s)
-#   that reference them (e.g. via Kubernetes or Docker Compose YAML).
-#
-#   More info: https://docs.tilt.dev/api.html#api.docker_build
-#
 docker_build('',
              context='.',
              # (Optional) Use a custom Dockerfile path
@@ -47,12 +17,12 @@ docker_build('',
 
 
 # Apply Kubernetes manifests
-#   Tilt will build & push any necessary images, re-deploying your
+#   Tilt will build & push any necessary imaesg, re-deploying your
 #   resources as they change.
 #
 #   More info: https://docs.tilt.dev/api.html#api.k8s_yaml
 #
-# k8s_yaml(['k8s/deployment.yaml', 'k8s/service.yaml'])
+k8s_yaml(['k8s/deployment.yaml', 'k8s/service.yaml'])
 
 
 # Customize a Kubernetes resource
