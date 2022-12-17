@@ -8,10 +8,10 @@ docker_build('',
              # https://docs.tilt.dev/live_update_reference.html
              live_update=[
                 # Sync files from host to container
-                sync('./app', '/src/'),
+                sync('./api', '/app/'),
                 # Execute commands inside the container when certain
                 # paths change
-                run('npm install && npm start', trigger=['./app/api'])
+                run('npm install && npm start', trigger=['./app/'])
              ]
 )
 
